@@ -11,10 +11,6 @@ function setTime(){
     secondHand.style.transform = `rotate(${secondDegree}deg)`;
 
     //Gets the angle of rotation for the minute hand
-    /*const minutes = now.getMinutes();
-    const minuteDegree = ((minutes / 60) * 360) - 90;
-    minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
-    */
     const minuteDegree = now.getMinutes() * 6; //The minute hand rotates by 6 degrees every minute
     const minuteHandSecondDegree = seconds * 0.1; // The minute hand rotates by 0.1 degress every second
     const finalMinuteDegree = (minuteDegree + minuteHandSecondDegree) - 95;
